@@ -1,4 +1,5 @@
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,55 @@
 <body>
     <h1>oabljslbasf</h1>
     <h2>aljsfblajsflj </h2>
+=======
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grocery List</title>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+                box-sizing: border-box;
+            }
+>>>>>>> 15d7391b9a55a28ec742cf243571d4ab362d188a
 
+            body{
+                background-color: black;
+                color: aliceblue;
+                text-align: center;
+            }
+            
+            h1{
+                font-size: 64px;
+            }
 
-    <script src="script.js"></script>
-</body>
+            h2{
+                font-size: 46px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Grocery List <br >Manager</h1>
+        </header>
+        <div>
+            <h2>Add Grocery</h2>
+            <input type="text" id="grocery"> <button onclick="addGrocery(this)">Add Item</button>
+        </div>
+        
+        
+        <div>
+            <h2>View List</h2>
+            <div id="listContainer">
+                <div class="listrow">
+                    <p>1. Banana</p> <BUTTON onclick="purchased()">Purchased</BUTTON>
+                </div>
+                <button onclick="clear()">Clear List</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
 </html>
