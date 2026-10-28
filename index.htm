@@ -1,13 +1,60 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Lis</title>
-</head>
-<body>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grocery List</title>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+                box-sizing: border-box;
+            }
 
+            body{
+                background-color: black;
+                color: aliceblue;
+                text-align: center;
+            }
+            
+            header{
+                margin: 5%;
+            }
 
-    <script src="script.js"></script>
-</body>
+            h1{
+                font-size: 64px;
+            }
+
+            h2{
+                font-size: 46px;
+            }
+
+            input{
+                font-size: 200px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Grocery List <br >Manager</h1>
+        </header>
+        <div>
+            <h2>Add Grocery</h2>
+            <input type="text" id="grocery"> 
+            <button onclick="addGrocery(this)">Add Item</button>
+        </div>
+        
+        
+        <div>
+            <h2>View List</h2>
+            <div id="listContainer">
+                <div class="listrow">
+                    <p>1. Banana</p> <BUTTON onclick="purchased()">Purchased</BUTTON>
+                </div>
+                <button onclick="clear()">Clear List</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
 </html>
