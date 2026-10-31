@@ -90,7 +90,13 @@
                 height: 2px;
             }
 
-            
+            .itemName.change{
+                text-decoration: line-through;
+            }
+
+            .hidden{
+                display: none;
+            }
 
         </style>
     </head>
@@ -100,18 +106,20 @@
         </header>
         <div>
             <h2>Add Grocery</h2>
-            <input type="text" id="grocery"> <button onclick="addGrocery()">Add Item</button>
+            <input type="text" id="grocery"> <button onclick="addGrocery(document.getElementById('grocery').value)">Add Item</button>
+            <br><button onclick="viewPurchasedOnly()">View Purchased Items</button> 
+            <button onclick="viewUnpurchasedOnly()">View Unpurchased Items</button>
+            <button onclick="viewAll()">View All</button>
         </div>
         
         
         <div>
             <h2>View List</h2>
             <div id="listContainer">
-                <div class="listrow" id="list">
-                    <p class="itemName">1. Banana</p> <BUTTON onclick="purchased(this)">Purchased</BUTTON>
+                <div class="listrow">
                 </div>
-                <button onclick="clearList()">Clear List</button>
             </div>
+            <button onclick="clearList()">Clear List</button>
         </div>
 
         <script src="script.js"></script>
