@@ -11,17 +11,91 @@
             }
 
             body{
-                background-color: black;
-                color: aliceblue;
+                background-color: rgb(0, 0, 15);
+                color: aquamarine;
                 text-align: center;
             }
             
+            header{
+                margin: 5%;
+            }
+
             h1{
                 font-size: 64px;
             }
 
             h2{
                 font-size: 46px;
+                margin-top: 80px;
+            }
+
+            input{
+                font-size: 40px;
+                background-color: rgb(0, 0, 15);
+                border: 10px aquamarine solid;
+                border-radius: 20px;
+                color: aquamarine;
+                padding: 2px 10px;
+                width: 75%;
+                margin: 40px;
+            }
+
+            input:focus{
+                background-color: aquamarine;
+                color: rgb(0, 0, 15);
+                border: 10px rgb(0, 0, 15) solid;
+            }
+
+            button{
+                font-size: 24px;
+                color: aquamarine;
+                background-color: rgb(0, 0, 15);
+                border: 5px solid aquamarine;
+                border-radius: 40px;
+                padding: 5px 10px;
+                margin: 20px;
+            }
+
+            button:hover{
+                color: rgb(0, 0, 15);
+                background-color: aquamarine;
+            }
+
+            #listsection{
+                background-color: rgb(0, 0, 15);
+            }
+
+            #listContainer{
+                color: aquamarine;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .listrow{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+           
+            p{
+                font-size: 36px;
+            }
+
+            .gap{
+                width: 20%;
+                height: 2px;
+            }
+
+            .itemName.change{
+                text-decoration: line-through;
+            }
+
+            .hidden{
+                display: none;
             }
 
         </style>
@@ -32,7 +106,10 @@
         </header>
         <div>
             <h2>Add Grocery</h2>
-            <input type="text" id="grocery"> <button onclick="addGrocery(this)">Add Item</button>
+            <input type="text" id="grocery"> <button onclick="addGrocery(document.getElementById('grocery').value)">Add Item</button>
+            <br><button onclick="viewPurchasedOnly()">View Purchased Items</button> 
+            <button onclick="viewUnpurchasedOnly()">View Unpurchased Items</button>
+            <button onclick="viewAll()">View All</button>
         </div>
         
         
@@ -40,10 +117,9 @@
             <h2>View List</h2>
             <div id="listContainer">
                 <div class="listrow">
-                    <p>1. Banana</p> <BUTTON onclick="purchased()">Purchased</BUTTON>
                 </div>
-                <button onclick="clear()">Clear List</button>
             </div>
+            <button onclick="clearList()">Clear List</button>
         </div>
 
         <script src="script.js"></script>
